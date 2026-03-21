@@ -1,0 +1,180 @@
+{
+  "nodes": [
+    {
+      "id": "player_base",
+      "type": "stock",
+      "label": "Player Base",
+      "value": 10000,
+      "unit": "players",
+      "description": "Active player count"
+    },
+    {
+      "id": "development_budget",
+      "type": "stock",
+      "label": "Development Budget",
+      "value": 500000,
+      "unit": "USD",
+      "description": "Available funding for development"
+    },
+    {
+      "id": "marketing_budget",
+      "type": "stock",
+      "label": "Marketing Budget",
+      "value": 100000,
+      "unit": "USD",
+      "description": "Available funding for marketing"
+    },
+    {
+      "id": "game_quality",
+      "type": "variable",
+      "label": "Game Quality",
+      "value": 7.5,
+      "unit": "rating (1-10)",
+      "description": "Overall game quality score"
+    },
+    {
+      "id": "player_acquisition",
+      "type": "flow",
+      "label": "Player Acquisition",
+      "rate": 500,
+      "unit": "players/day",
+      "description": "New players joining"
+    },
+    {
+      "id": "player_churn",
+      "type": "flow",
+      "label": "Player Churn",
+      "rate": 150,
+      "unit": "players/day",
+      "description": "Players leaving"
+    },
+    {
+      "id": "revenue_generation",
+      "type": "flow",
+      "label": "Revenue Generation",
+      "rate": 2500,
+      "unit": "USD/day",
+      "description": "Daily revenue from all sources"
+    },
+    {
+      "id": "development_cost",
+      "type": "flow",
+      "label": "Development Cost",
+      "rate": 2000,
+      "unit": "USD/day",
+      "description": "Daily development expenses"
+    },
+    {
+      "id": "marketing_spend",
+      "type": "flow",
+      "label": "Marketing Spend",
+      "rate": 500,
+      "unit": "USD/day",
+      "description": "Daily marketing expenses"
+    },
+    {
+      "id": "community_engagement",
+      "type": "variable",
+      "label": "Community Engagement",
+      "value": 65,
+      "unit": "%",
+      "description": "Player community engagement level"
+    },
+    {
+      "id": "review_score",
+      "type": "variable",
+      "label": "Review Score",
+      "value": 82,
+      "unit": "%",
+      "description": "Average review score"
+    },
+    {
+      "id": "retention_rate",
+      "type": "variable",
+      "label": "Retention Rate",
+      "value": 40,
+      "unit": "%",
+      "description": "Player retention after 30 days"
+    }
+  ],
+  "edges": [
+    {
+      "source": "marketing_budget",
+      "target": "player_acquisition",
+      "label": "funds",
+      "strength": 0.8
+    },
+    {
+      "source": "marketing_spend",
+      "target": "marketing_budget",
+      "label": "depletes",
+      "strength": 1.0
+    },
+    {
+      "source": "development_budget",
+      "target": "development_cost",
+      "label": "funds",
+      "strength": 1.0
+    },
+    {
+      "source": "development_budget",
+      "target": "game_quality",
+      "label": "improves",
+      "strength": 0.7
+    },
+    {
+      "source": "game_quality",
+      "target": "player_acquisition",
+      "label": "attracts",
+      "strength": 0.6
+    },
+    {
+      "source": "game_quality",
+      "target": "player_churn",
+      "label": "reduces",
+      "strength": -0.5
+    },
+    {
+      "source": "game_quality",
+      "target": "review_score",
+      "label": "impacts",
+      "strength": 0.9
+    },
+    {
+      "source": "review_score",
+      "target": "player_acquisition",
+      "label": "influences",
+      "strength": 0.4
+    },
+    {
+      "source": "player_base",
+      "target": "revenue_generation",
+      "label": "generates",
+      "strength": 0.3
+    },
+    {
+      "source": "community_engagement",
+      "target": "retention_rate",
+      "label": "improves",
+      "strength": 0.8
+    },
+    {
+      "source": "retention_rate",
+      "target": "player_churn",
+      "label": "reduces",
+      "strength": -0.7
+    },
+    {
+      "source": "revenue_generation",
+      "target": "development_budget",
+      "label": "funds",
+      "strength": 0.6
+    },
+    {
+      "source": "revenue_generation",
+      "target": "marketing_budget",
+      "label": "funds",
+      "strength": 0.4
+    }
+  ]
+}

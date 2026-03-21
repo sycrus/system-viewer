@@ -1,0 +1,9 @@
+revenue_stream,monthly_revenue,user_base,conversion_rate,cost_per_user
+Premium_Sales,50000,10000,0.05,2.50
+In_App_Purchases,75000,50000,0.15,1.20
+Subscriptions,30000,15000,0.20,1.80
+Ad_Revenue,20000,100000,0.02,0.15
+DLC_Content,25000,8000,0.08,1.50
+Crowdfunding,10000,5000,0.40,5.00
+Merchandise,15000,3000,0.10,3.00
+Licensing,50000,20,1.00,250.00
