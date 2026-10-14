@@ -95,7 +95,7 @@ const RevenueChart: React.FC<RevenueChartProps> = ({
     <div className="bg-white p-4 rounded border">
       <h3 className="font-medium text-gray-700 mb-2">Revenue Distribution</h3>
       <svg ref={svgRef} width={width} height={height} />
-      <div className="text-sm text-gray-600 mt-2">
+       <div className="text-xs text-gray-600 mt-2">
         <div className="flex justify-between">
           <span>Total Streams:</span>
           <span className="font-medium">{data.length}</span>

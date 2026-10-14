@@ -9,8 +9,8 @@ const StockNode: React.FC<NodeProps> = ({ data, selected }) => {
     }`}>
       <Handle type="target" position={Position.Top} className="w-3 h-3" />
       <div className="font-bold text-blue-800">{data.label}</div>
-      <div className="text-2xl font-mono my-1">{data.value}</div>
-      <div className="text-sm text-gray-600">{data.unit}</div>
+       <div className="text-xl font-mono my-1">{data.value}</div>
+       <div className="text-xs text-gray-600">{data.unit}</div>
       <Handle type="source" position={Position.Bottom} className="w-3 h-3" />
     </div>
   );

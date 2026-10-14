@@ -9,8 +9,8 @@ const FlowNode: React.FC<NodeProps> = ({ data, selected }) => {
     }`}>
       <Handle type="target" position={Position.Left} className="w-3 h-3" />
       <div className="font-bold text-green-800">{data.label}</div>
-      <div className="text-xl font-mono my-1">{data.rate} / time</div>
-      <div className="text-sm text-gray-600">{data.unit}</div>
+       <div className="text-lg font-mono my-1">{data.rate} / time</div>
+       <div className="text-xs text-gray-600">{data.unit}</div>
       <Handle type="source" position={Position.Right} className="w-3 h-3" />
     </div>
   );

@@ -9,7 +9,7 @@ const VariableNode: React.FC<NodeProps> = ({ data, selected }) => {
     }`}>
       <Handle type="target" position={Position.Top} className="w-3 h-3" />
       <div className="font-bold text-purple-800">{data.label}</div>
-      <div className="text-lg font-mono my-1">{data.value}</div>
+       <div className="text-base font-mono my-1">{data.value}</div>
       {data.expression && (
         <div className="text-xs text-gray-600 mt-1">{data.expression}</div>
       )}
